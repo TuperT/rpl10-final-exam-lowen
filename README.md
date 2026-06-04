@@ -1,5 +1,5 @@
 # TR X RPL Final exam
-![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![GSAP](https://img.shields.io/badge/GSAP-%2388CE02.svg?style=for-the-badge&logo=greensock&logoColor=black)
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![GSAP](https://img.shields.io/badge/GSAP-%2388CE02.svg?style=for-the-badge&logo=greensock&logoColor=black) ![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/fb5a45fc-71f9-42ff-95a3-fa03f8a4eaf0" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7e251e89-f693-41bb-a8c5-9bfbd72eea8c" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/043bfbcc-28f8-4f66-a3f3-bfa9aec31cfe" />
