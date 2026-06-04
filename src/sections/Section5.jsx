@@ -1,5 +1,5 @@
 import '../styles/sections/Section5.css';
-import MockupImage from '../assets/sections/section5/Mockup.jpg';
+import MockupImage from '../assets/sections/section5/mockup.jpg';
 import MentorImage from '../assets/sections/section5/mentor.png';
 import TaskImage from '../assets/sections/section5/task.png';
 import gsap from 'gsap';
