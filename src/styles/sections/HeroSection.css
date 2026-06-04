@@ -12,6 +12,7 @@
     ), url("/src/assets/hero.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center center;
 }
 
 #hero-offer {
@@ -68,4 +69,10 @@
     font-family: "Lexend Deca", sans-serif;
     cursor: pointer;
     font-size: 0.8vw;
+}
+
+@media (max-width: 768px) {
+    #hero {
+        height: 60dvh;
+    }
 }

@@ -72,3 +72,9 @@
 #section6 .swiper-slide {
     height: auto;
 }
+
+@media (max-width: 768px) {
+    #section6 {
+        height: 60dvh;
+    }
+}

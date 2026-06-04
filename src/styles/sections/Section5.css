@@ -72,3 +72,9 @@
     font-size: clamp(0.6rem, 1.1vw, 1.2rem);
     font-weight: 500;
 }
+
+@media (max-width: 768px) {
+    #section5 {
+        height: 60dvh;
+    }
+}
