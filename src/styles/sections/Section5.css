@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+#section5 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+#section5-image {
+    position: relative;
+    margin-left: 9%;
+}
+
+#section5-mockup {
+    position: relative;
+    width: 40vw;
+}
+
+#section5-img-mentor img {
+    position: absolute;
+    width: 15vw;
+    top: 23vw;
+    left: 2vw;
+}
+
+#section5-img-task img {
+    position: absolute;
+    width: 15vw;
+    top: 8vw;
+    left: 2vw;
+}
+
+#section5-offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 30vw;
+    margin-right: 9%;
+}
+
+#section5-offer-content h1 {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: clamp(1rem, 3vw, 3rem);
+    color: #232340;
+    font-weight: 700;
+}
+
+#section5-offer-content p {
+    font-family: "Lexend Deca", sans-serif;
+    font-size: clamp(0.6rem, 1.3vw, 1.4rem);
+    color: #232340;
+    font-weight: 400;
+    width: 24vw;
+    line-height: 1.6;
+    letter-spacing: -0.02em;
+}
+
+#section5-offer-link-btn button {
+    font-family: "Lexend Deca", sans-serif;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #5468E7;
+    margin-top: 1vh;
+    margin-left: -15.4vw;
+    text-decoration: underline;
+    font-size: clamp(0.6rem, 1.1vw, 1.2rem);
+    font-weight: 500;
+}
