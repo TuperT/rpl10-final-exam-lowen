@@ -1,8 +1,18 @@
 import '../styles/components/NavBar.css';
+import { useState, useEffect } from 'react';
 
 const NavBar = () => {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const onScroll = () => setIsScrolled(window.scrollY > 20);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+        return () => window.removeEventListener('scroll', onScroll);
+    }, [])
+
     return (
-        <nav>
+        <nav className={isScrolled ? 'scrolled' : ''}>
             <div id="nav-header">
                 team<span>.</span>
             </div>
