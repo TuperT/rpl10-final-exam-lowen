@@ -105,3 +105,29 @@ footer {
     right: 18vw;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        height: auto;
+        align-items:flex-start ;
+        justify-content: center;
+    }
+
+    #logo-container {
+        margin-left: 9%;
+        width: 20vw;
+    }
+
+    #menus {
+        flex-direction: column;
+    }
+
+    #sutd #footer-input-btn {
+        display: none;
+    }
+
+    .foot-header {
+        width: 40vw;
+    }
+}
