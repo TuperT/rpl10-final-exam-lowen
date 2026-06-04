@@ -36,7 +36,7 @@ nav.scrolled {
     font-weight: 600;
     letter-spacing: -2%;
     line-height: 100%;
-    font-size: 2.6042vw;
+    font-size: clamp(1rem, 3vw, 3rem);
     color: #F5F5F5;
 }
 
@@ -49,8 +49,8 @@ nav.scrolled {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
-    font-size: 1.2vw;
+    gap: 5vw;
+    font-size: clamp(0.4rem, 1.2vw, 1.2rem);
 }
 
 .menu {
@@ -74,3 +74,10 @@ nav.scrolled {
     font-size: 1.3vw;
     cursor: pointer;
 }
+
+@media (max-width: 768px) {
+    #menu-btn {
+        width: 12vw;
+        height: 4vh;
+    }
+ }
