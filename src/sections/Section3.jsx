@@ -18,7 +18,7 @@ const Section3 = () => {
                     start: 'top 70%',
                 }, 
             })
-
+            
             tl.from('#section3-image', { xPercent: -500, ease: 'power2.out' })
             .from('#section3-info', { xPercent: 500, ease: 'power2.out' }, "-=0.2")
 
