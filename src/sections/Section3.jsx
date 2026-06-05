@@ -15,12 +15,12 @@ const Section3 = () => {
             let tl = gsap.timeline({
                 scrollTrigger: {
                     trigger: sectionRef.current,
-                    start: 'top 50%',
+                    start: 'top 70%',
                 }, 
             })
 
-            tl.from('#section3-image', { xPercent: -500, ease: 'power1.inOut' })
-            .from('#section3-info', { xPercent: 500, ease: 'power1.inOut' })
+            tl.from('#section3-image', { xPercent: -500, ease: 'power2.out' })
+            .from('#section3-info', { xPercent: 500, ease: 'power2.out' }, "-=0.2")
 
         }, sectionRef)
 

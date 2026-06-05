@@ -3,84 +3,103 @@ import TestimonialCard from '../components/TestimonialCard'
 import Avatar1 from '../assets/components/TestimonialCard/Avatar1.jpg'
 import Avatar2 from '../assets/components/TestimonialCard/Avatar2.jpg'
 import Avatar3 from '../assets/components/TestimonialCard/Avatar3.jpg'
-
+import { useEffect } from 'react'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/all'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/navigation'
 
+gsap.registerPlugin(ScrollTrigger)
+
 const Section6 = () => {
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+            let tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: '#section6-title',
+                    start: 'top 80%',
+                }
+            })
+
+            tl.from(".testimonial-card", { opacity: 0, stagger: 0.3 })
+        })
+
+        return () => ctx.revert()
+    }, [])
+
     const testimonials = [
-    {
-        id: 1,
-        review: "Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
-        name: "Chealsea Morgan",
-        role: "CEO at Subway",
-        avatar: Avatar1,
-    },
-    {
-        id: 2,
-        review: "In a laoreet purus. Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat volutpat. Curabitur fringilla in purus eget egestas. Etiam quis.",
-        name: "Nick Cave",
-        role: "CMO at Nokia",
-        avatar: Avatar2,
-    },
-    {
-        id: 3,
-        review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
-        name: "Lana Rosenfeld",
-        role: "Senior VP at Pinterest",
-        avatar: Avatar3,
-    },
-    {
-        id: 4,
-        review: "Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
-        name: "Chealsea Morgan",
-        role: "CEO at Subway",
-        avatar: Avatar1,
-    },
-    {
-        id: 5,
-        review: "In a laoreet purus. Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat volutpat. Curabitur fringilla in purus eget egestas. Etiam quis.",
-        name: "Nick Cave",
-        role: "CMO at Nokia",
-        avatar: Avatar2,
-    },
-    {
-        id: 6,
-        review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
-        name: "Lana Rosenfeld",
-        role: "Senior VP at Pinterest",
-        avatar: Avatar3,
-    },
-    {
-        id: 7,
-        review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
-        name: "Lana Rosenfeld",
-        role: "Senior VP at Pinterest",
-        avatar: Avatar3,
-    },
-    {
-        id: 8,
-        review: "Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
-        name: "Chealsea Morgan",
-        role: "CEO at Subway",
-        avatar: Avatar1,
-    },
-    {
-        id: 9,
-        review: "In a laoreet purus. Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat volutpat. Curabitur fringilla in purus eget egestas. Etiam quis.",
-        name: "Nick Cave",
-        role: "CMO at Nokia",
-        avatar: Avatar2,
-    },
-    {
-        id: 10,
-        review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
-        name: "Lana Rosenfeld",
-        role: "Senior VP at Pinterest",
-        avatar: Avatar3,
-    },
+        {
+            id: 1,
+            review: "Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+            name: "Chealsea Morgan",
+            role: "CEO at Subway",
+            avatar: Avatar1,
+        },
+        {
+            id: 2,
+            review: "In a laoreet purus. Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat volutpat. Curabitur fringilla in purus eget egestas. Etiam quis.",
+            name: "Nick Cave",
+            role: "CMO at Nokia",
+            avatar: Avatar2,
+        },
+        {
+            id: 3,
+            review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
+            name: "Lana Rosenfeld",
+            role: "Senior VP at Pinterest",
+            avatar: Avatar3,
+        },
+        {
+            id: 4,
+            review: "Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+            name: "Chealsea Morgan",
+            role: "CEO at Subway",
+            avatar: Avatar1,
+        },
+        {
+            id: 5,
+            review: "In a laoreet purus. Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat volutpat. Curabitur fringilla in purus eget egestas. Etiam quis.",
+            name: "Nick Cave",
+            role: "CMO at Nokia",
+            avatar: Avatar2,
+        },
+        {
+            id: 6,
+            review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
+            name: "Lana Rosenfeld",
+            role: "Senior VP at Pinterest",
+            avatar: Avatar3,
+        },
+        {
+            id: 7,
+            review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
+            name: "Lana Rosenfeld",
+            role: "Senior VP at Pinterest",
+            avatar: Avatar3,
+        },
+        {
+            id: 8,
+            review: "Vestibulum eu quam nec neque pellentesque efficitur id eget nisl. Proin porta est convallis lacus blandit pretium sed non enim. Maecenas lacinia non orci at aliquam. Donec finibus, urna bibendum ultricies laoreet.",
+            name: "Chealsea Morgan",
+            role: "CEO at Subway",
+            avatar: Avatar1,
+        },
+        {
+            id: 9,
+            review: "In a laoreet purus. Integer turpis quam, laoreet id orci nec, ultrices lacinia nunc. Aliquam erat volutpat. Curabitur fringilla in purus eget egestas. Etiam quis.",
+            name: "Nick Cave",
+            role: "CMO at Nokia",
+            avatar: Avatar2,
+        },
+        {
+            id: 10,
+            review: "Aliquam pulvinar vestibulum blandit. Donec sed nisl libero. Fusce dignissim luctus sem eu dapibus. Pellentesque vulputate quam a quam volutpat, sed ullamcorper erat commodo.",
+            name: "Lana Rosenfeld",
+            role: "Senior VP at Pinterest",
+            avatar: Avatar3,
+        },
     ]
 
     return (
@@ -121,7 +140,7 @@ const Section6 = () => {
                         </SwiperSlide>
                     ))}
                 </Swiper>
- 
+
                 <div className="swiper-navigation">
                     <button className="swiper-btn-prev" aria-label="Previous slide">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

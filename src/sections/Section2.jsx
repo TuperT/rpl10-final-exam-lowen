@@ -21,9 +21,9 @@ const Section2 = () => {
                 }, 
             },)
 
-            tl.from('#section2-img-mentors', { scale: 0, ease: 'bounce.out' })
-            .from('#section2-img-task', { scale: 0, ease: 'bounce.out' }, "+=0.1")
-            .from('#section2-img-dashboard', { scale: 0, ease: 'bounce.out' }, "+=0.1");
+            tl.from('#section2-img-mentors', { scale: 0, ease: 'back.out(1.7)' })
+            .from('#section2-img-task', { scale: 0, ease: 'back.out(1.7)' }, "-=0.1")
+            .from('#section2-img-dashboard', { scale: 0, ease: 'back.out(1.7)' }, "-=0.1");
         }, sectionRef)
 
         return () => ctx.revert();
